@@ -17,7 +17,7 @@ class MarkovChain:
   def __init__(self, num_key_words=2):
     self.num_key_words = num_key_words
     self.lookup_dict = defaultdict(list)
-    self._punctuation_regex = re.compile('[,.!;\?\:\-\[\]\n]+')
+    self._punctuation_regex = re.compile('[,.!;\?\:\-\[\]\(\)\"\\\n]+')
     self._seeded = False
     self.__seed_me()
 
